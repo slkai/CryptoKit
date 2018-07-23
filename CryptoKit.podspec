@@ -26,8 +26,6 @@ Pod::Spec.new do |s|
     'SWIFT_VERSION' => '4.0'
   }
 
-  s.prepare_command = <<-CMD
-                            mkdir -p "${SRCROOT}/Sources/CommonCryptoModuleMap"
-                        CMD
+  s.prepare_command = 'mkdir -p "${SRCROOT}/Sources/CommonCryptoModuleMap"'
 
 end
