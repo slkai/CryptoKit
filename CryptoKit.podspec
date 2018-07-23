@@ -16,6 +16,7 @@ Pod::Spec.new do |s|
   s.watchos.deployment_target = '3.0'
 
   s.requires_arc = true
+  s.prepare_command = './install'
   s.source_files = 'Sources/**/*'
 
   # 需要保留的文件路径
@@ -26,6 +27,6 @@ Pod::Spec.new do |s|
     'SWIFT_VERSION' => '4.0'
   }
 
-  s.prepare_command = './install'
+
 
 end
