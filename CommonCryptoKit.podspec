@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
   s.preserve_paths = '${BUILT_PRODUCTS_DIR}/CommonCryptoModuleMap/**/*'
 
   s.pod_target_xcconfig = {
-    'SWIFT_INCLUDE_PATHS' => '${BUILT_PRODUCTS_DIR}/CommonCryptoModuleMap'
+    'SWIFT_INCLUDE_PATHS' => '${BUILT_PRODUCTS_DIR}/CommonCryptoModuleMap',
     'SWIFT_VERSION' => '4.0'
   }
 
