@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.license          = 'MIT'
   s.author           = { "alan" => "alandeng@meijiabang.cn" }
   s.source           = {
-    :git => "https://github.com/slkai/CryptoKit",
+    :git => "https://github.com/slkai/CryptoKit.git",
     :tag => s.version.to_s
   }
 
@@ -26,6 +26,6 @@ Pod::Spec.new do |s|
     'SWIFT_VERSION' => '4.0'
   }
 
-  s.prepare_command = 'cmd ./script'
+  s.prepare_command = 'ls'
 
 end
