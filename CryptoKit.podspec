@@ -26,7 +26,7 @@ Pod::Spec.new do |s|
     'SWIFT_VERSION' => '4.0'
   }
 
-  spec.prepare_command = <<-CMD
+  s.prepare_command = <<-CMD
                             if [ -d "${SRCROOT}/Sources/CommonCryptoModuleMap" ]; then
                             echo "${SRCROOT}/Sources/CommonCryptoModuleMap directory already exists, so skipping the rest of the script."
                             exit 0
