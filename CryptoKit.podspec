@@ -22,8 +22,8 @@ Pod::Spec.new do |s|
         exit 0
         fi
 
-        mkdir -p "${SRCROOT}/Sources/CommonCryptoModuleMap"
-        cat <<EOF > "${SRCROOT}/Sources/CommonCryptoModuleMap/module.modulemap"
+        sudo mkdir -p "${SRCROOT}/Sources/CommonCryptoModuleMap"
+        sudo cat <<EOF > "${SRCROOT}/Sources/CommonCryptoModuleMap/module.modulemap"
         module CommonCrypto [system] {
         header "${SDKROOT}/usr/include/CommonCrypto/CommonCrypto.h"
         export *
