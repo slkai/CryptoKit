@@ -22,7 +22,7 @@
 
 /* Begin PBXBuildFile section */
 		E77E53D521057FF200928B0D /* String+HMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77E53D421057FF100928B0D /* String+HMAC.swift */; };
-		E77E53D92105801D00928B0D /* CommonCryptoKit.podspec in Resources */ = {isa = PBXBuildFile; fileRef = E77E53D82105801D00928B0D /* CommonCryptoKit.podspec */; };
+		E77E53DB21058D5400928B0D /* CryptoKit.podspec in Resources */ = {isa = PBXBuildFile; fileRef = E77E53DA21058D5400928B0D /* CryptoKit.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +39,7 @@
 		E77E53BF21057E9900928B0D /* CryptoKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CryptoKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E77E53C321057E9900928B0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E77E53D421057FF100928B0D /* String+HMAC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+HMAC.swift"; sourceTree = "<group>"; };
-		E77E53D82105801D00928B0D /* CommonCryptoKit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CommonCryptoKit.podspec; sourceTree = SOURCE_ROOT; };
+		E77E53DA21058D5400928B0D /* CryptoKit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CryptoKit.podspec; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +72,7 @@
 		E77E53C121057E9900928B0D /* CryptoKit */ = {
 			isa = PBXGroup;
 			children = (
-				E77E53D82105801D00928B0D /* CommonCryptoKit.podspec */,
+				E77E53DA21058D5400928B0D /* CryptoKit.podspec */,
 				E77E53D321057FF100928B0D /* Sources */,
 				E77E53C321057E9900928B0D /* Info.plist */,
 			);
@@ -160,7 +160,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E77E53D92105801D00928B0D /* CommonCryptoKit.podspec in Resources */,
+				E77E53DB21058D5400928B0D /* CryptoKit.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,7 +178,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# This if-statement means we'll only run the main script if the CommonCryptoModuleMap directory doesn't exist\n# Because otherwise the rest of the script causes a full recompile for anything where CommonCrypto is a dependency\n# Do a \"Clean Build Folder\" to remove this directory and trigger the rest of the script to run\nif [ -d \"${BUILT_PRODUCTS_DIR}/CommonCryptoModuleMap\" ]; then\necho \"${BUILT_PRODUCTS_DIR}/CommonCryptoModuleMap directory already exists, so skipping the rest of the script.\"\nexit 0\nfi\n\nmkdir -p \"${BUILT_PRODUCTS_DIR}/CommonCryptoModuleMap\"\ncat <<EOF > \"${BUILT_PRODUCTS_DIR}/CommonCryptoModuleMap/module.modulemap\"\nmodule CommonCrypto [system] {\n    header \"${SDKROOT}/usr/include/CommonCrypto/CommonCrypto.h\"\n    export *\n}\nEOF";
+			shellScript = "# This if-statement means we'll only run the main script if the CommonCryptoModuleMap directory doesn't exist\n# Because otherwise the rest of the script causes a full recompile for anything where CommonCrypto is a dependency\n# Do a \"Clean Build Folder\" to remove this directory and trigger the rest of the script to run\nif [ -d \"${SRCROOT}/Sources/CommonCryptoModuleMap\" ]; then\necho \"${SRCROOT}/Sources/CommonCryptoModuleMap directory already exists, so skipping the rest of the script.\"\nexit 0\nfi\n\nmkdir -p \"${SRCROOT}/Sources/CommonCryptoModuleMap\"\ncat <<EOF > \"${SRCROOT}/Sources/CommonCryptoModuleMap/module.modulemap\"\nmodule CommonCrypto [system] {\n    header \"${SDKROOT}/usr/include/CommonCrypto/CommonCrypto.h\"\n    export *\n}\nEOF";
 		};
 /* End PBXShellScriptBuildPhase section */
 
