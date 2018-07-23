@@ -21,6 +21,21 @@ Pod::Spec.new do |s|
   # 需要保留的文件路径
   s.preserve_paths = '${BUILT_PRODUCTS_DIR}/CommonCryptoModuleMap/**/*'
 
+  s.prepare_command = <<-CMD
+    if [ -d "${BUILT_PRODUCTS_DIR}/CommonCryptoModuleMap" ]; then
+    echo "${BUILT_PRODUCTS_DIR}/CommonCryptoModuleMap directory already exists, so skipping the rest of the script."
+    exit 0
+    fi
+
+    mkdir -p "${BUILT_PRODUCTS_DIR}/CommonCryptoModuleMap"
+    cat <<EOF > "${BUILT_PRODUCTS_DIR}/CommonCryptoModuleMap/module.modulemap"
+    module CommonCrypto [system] {
+    header "${SDKROOT}/usr/include/CommonCrypto/CommonCrypto.h"
+    export *
+    }
+    EOF
+  CMD
+
   s.pod_target_xcconfig = {
     'SWIFT_INCLUDE_PATHS' => '${BUILT_PRODUCTS_DIR}/CommonCryptoModuleMap',
     'SWIFT_VERSION' => '4.0'
