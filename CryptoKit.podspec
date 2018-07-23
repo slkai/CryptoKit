@@ -16,7 +16,9 @@ Pod::Spec.new do |s|
   s.watchos.deployment_target = '3.0'
 
   s.requires_arc = true
-  s.prepare_command = './install'
+  s.prepare_command = <<-CMD
+    ls
+  CMD
   s.source_files = 'Sources/**/*'
 
   # 需要保留的文件路径
