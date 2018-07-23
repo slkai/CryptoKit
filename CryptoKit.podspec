@@ -17,18 +17,18 @@ Pod::Spec.new do |s|
 
   s.requires_arc = true
   s.prepare_command = <<-CMD
-        if [ -d "${SRCROOT}/Sources/CommonCryptoModuleMap" ]; then
-        echo "${SRCROOT}/Sources/CommonCryptoModuleMap directory already exists, so skipping the rest of the script."
-        exit 0
-        fi
+#        if [ -d "${SRCROOT}/Sources/CommonCryptoModuleMap" ]; then
+#        echo "${SRCROOT}/Sources/CommonCryptoModuleMap directory already exists, so skipping the rest of the script."
+#        exit 0
+#        fi
 
-        sudo mkdir -p "${SRCROOT}/Sources/CommonCryptoModuleMap"
-        sudo cat <<EOF > "${SRCROOT}/Sources/CommonCryptoModuleMap/module.modulemap"
-        module CommonCrypto [system] {
-        header "${SDKROOT}/usr/include/CommonCrypto/CommonCrypto.h"
-        export *
-        }
-        EOF
+        sudo mkdir -p "./Sources/CommonCryptoModuleMap"
+#        sudo cat <<EOF > "${SRCROOT}/Sources/CommonCryptoModuleMap/module.modulemap"
+#        module CommonCrypto [system] {
+#        header "${SDKROOT}/usr/include/CommonCrypto/CommonCrypto.h"
+#        export *
+#        }
+#        EOF
 
   CMD
   s.source_files = 'Sources/**/*'
