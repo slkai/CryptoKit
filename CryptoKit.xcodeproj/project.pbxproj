@@ -23,7 +23,7 @@
 /* Begin PBXBuildFile section */
 		E77E53D521057FF200928B0D /* String+HMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77E53D421057FF100928B0D /* String+HMAC.swift */; };
 		E77E53DB21058D5400928B0D /* CryptoKit.podspec in Resources */ = {isa = PBXBuildFile; fileRef = E77E53DA21058D5400928B0D /* CryptoKit.podspec */; };
-		E77E53DD2105A90900928B0D /* script in Resources */ = {isa = PBXBuildFile; fileRef = E77E53DC2105A90900928B0D /* script */; };
+		E77E53DD2105A90900928B0D /* install in Resources */ = {isa = PBXBuildFile; fileRef = E77E53DC2105A90900928B0D /* install */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +41,7 @@
 		E77E53C321057E9900928B0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E77E53D421057FF100928B0D /* String+HMAC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+HMAC.swift"; sourceTree = "<group>"; };
 		E77E53DA21058D5400928B0D /* CryptoKit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CryptoKit.podspec; sourceTree = SOURCE_ROOT; };
-		E77E53DC2105A90900928B0D /* script */ = {isa = PBXFileReference; lastKnownFileType = text; path = script; sourceTree = "<group>"; };
+		E77E53DC2105A90900928B0D /* install */ = {isa = PBXFileReference; lastKnownFileType = text; path = install; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				E77E53DA21058D5400928B0D /* CryptoKit.podspec */,
-				E77E53DC2105A90900928B0D /* script */,
+				E77E53DC2105A90900928B0D /* install */,
 				E77E53D321057FF100928B0D /* Sources */,
 				E77E53C321057E9900928B0D /* Info.plist */,
 			);
@@ -164,7 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E77E53DB21058D5400928B0D /* CryptoKit.podspec in Resources */,
-				E77E53DD2105A90900928B0D /* script in Resources */,
+				E77E53DD2105A90900928B0D /* install in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
