@@ -16,29 +16,17 @@ Pod::Spec.new do |s|
   s.watchos.deployment_target = '3.0'
 
   s.requires_arc = true
-  s.prepare_command = <<-CMD
-        if [ -d "${SRCROOT}/Sources/CommonCryptoModuleMap" ]; then
-        echo "${SRCROOT}/Sources/CommonCryptoModuleMap directory already exists, so skipping the rest of the script."
-        exit 0
-        fi
 
-        sudo mkdir -p "./CryptoKit/Sources/CommonCryptoModuleMap"
-        sudo cat <<EOF > "./CryptoKit/Sources/CommonCryptoModuleMap/module.modulemap"
-        module CommonCrypto [system] {
-        header "/usr/include/CommonCrypto/CommonCrypto.h"
-        export *
-        }
-        EOF
-
-  CMD
   s.source_files = 'Sources/**/*'
 
-  # 需要保留的文件路径
-  #s.preserve_paths = '${BUILT_PRODUCTS_DIR}/CommonCryptoModuleMap/**/*'
-
   s.pod_target_xcconfig = {
-    'SWIFT_INCLUDE_PATHS' => './CryptoKit/Sources/CommonCryptoModuleMap',
-    'SWIFT_VERSION' => '4.0'
+    'SWIFT_INCLUDE_PATHS[sdk=macosx*]'           => '$(PODS_ROOT)/CryptoKit/Sources/ModuleMaps/macosx',
+    'SWIFT_INCLUDE_PATHS[sdk=iphoneos*]'         => '$(PODS_ROOT)/CryptoKit/Sources/ModuleMaps/iphoneos',
+    'SWIFT_INCLUDE_PATHS[sdk=iphonesimulator*]'  => '$(PODS_ROOT)/CryptoKit/Sources/ModuleMaps/iphonesimulator',
+    'SWIFT_INCLUDE_PATHS[sdk=appletvos*]'        => '$(PODS_ROOT)/CryptoKit/Sources/ModuleMaps/appletvos',
+    'SWIFT_INCLUDE_PATHS[sdk=appletvsimulator*]' => '$(PODS_ROOT)/CryptoKit/Sources/ModuleMaps/appletvsimulator',
+    'SWIFT_INCLUDE_PATHS[sdk=watchos*]'          => '$(PODS_ROOT)/CryptoKit/Sources/ModuleMaps/watchos',
+    'SWIFT_INCLUDE_PATHS[sdk=watchsimulator*]'   => '$(PODS_ROOT)/CryptoKit/Sources/ModuleMaps/watchsimulator'
   }
 
 

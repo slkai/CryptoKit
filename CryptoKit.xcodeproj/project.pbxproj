@@ -6,40 +6,23 @@
 	objectVersion = 50;
 	objects = {
 
-/* Begin PBXAggregateTarget section */
-		E77E53CA21057ED900928B0D /* CommonCryptoModuleMap */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = E77E53CB21057ED900928B0D /* Build configuration list for PBXAggregateTarget "CommonCryptoModuleMap" */;
-			buildPhases = (
-				E77E53CE21057EE500928B0D /* ShellScript */,
-			);
-			dependencies = (
-			);
-			name = CommonCryptoModuleMap;
-			productName = CommonCryptoModuleMap;
-		};
-/* End PBXAggregateTarget section */
-
 /* Begin PBXBuildFile section */
 		E77E53D521057FF200928B0D /* String+HMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77E53D421057FF100928B0D /* String+HMAC.swift */; };
 		E77E53DB21058D5400928B0D /* CryptoKit.podspec in Resources */ = {isa = PBXBuildFile; fileRef = E77E53DA21058D5400928B0D /* CryptoKit.podspec */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		E77E53CF21057EF800928B0D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E77E53B621057E9900928B0D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E77E53CA21057ED900928B0D;
-			remoteInfo = CommonCryptoModuleMap;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		E77E53BF21057E9900928B0D /* CryptoKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CryptoKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E77E53C321057E9900928B0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E77E53D421057FF100928B0D /* String+HMAC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+HMAC.swift"; sourceTree = "<group>"; };
 		E77E53DA21058D5400928B0D /* CryptoKit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CryptoKit.podspec; sourceTree = SOURCE_ROOT; };
+		E77E53E02105D99900928B0D /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		E77E53E22105D99900928B0D /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		E77E53E42105D99900928B0D /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		E77E53E62105D99900928B0D /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		E77E53E82105D99900928B0D /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		E77E53EA2105D99900928B0D /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		E77E53EC2105D99900928B0D /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,10 +65,81 @@
 		E77E53D321057FF100928B0D /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				E77E53DE2105D99900928B0D /* ModuleMaps */,
 				E77E53D421057FF100928B0D /* String+HMAC.swift */,
 			);
 			path = Sources;
 			sourceTree = SOURCE_ROOT;
+		};
+		E77E53DE2105D99900928B0D /* ModuleMaps */ = {
+			isa = PBXGroup;
+			children = (
+				E77E53DF2105D99900928B0D /* appletvsimulator */,
+				E77E53E12105D99900928B0D /* watchos */,
+				E77E53E32105D99900928B0D /* iphoneos */,
+				E77E53E52105D99900928B0D /* appletvos */,
+				E77E53E72105D99900928B0D /* watchsimulator */,
+				E77E53E92105D99900928B0D /* macosx */,
+				E77E53EB2105D99900928B0D /* iphonesimulator */,
+			);
+			path = ModuleMaps;
+			sourceTree = "<group>";
+		};
+		E77E53DF2105D99900928B0D /* appletvsimulator */ = {
+			isa = PBXGroup;
+			children = (
+				E77E53E02105D99900928B0D /* module.modulemap */,
+			);
+			path = appletvsimulator;
+			sourceTree = "<group>";
+		};
+		E77E53E12105D99900928B0D /* watchos */ = {
+			isa = PBXGroup;
+			children = (
+				E77E53E22105D99900928B0D /* module.modulemap */,
+			);
+			path = watchos;
+			sourceTree = "<group>";
+		};
+		E77E53E32105D99900928B0D /* iphoneos */ = {
+			isa = PBXGroup;
+			children = (
+				E77E53E42105D99900928B0D /* module.modulemap */,
+			);
+			path = iphoneos;
+			sourceTree = "<group>";
+		};
+		E77E53E52105D99900928B0D /* appletvos */ = {
+			isa = PBXGroup;
+			children = (
+				E77E53E62105D99900928B0D /* module.modulemap */,
+			);
+			path = appletvos;
+			sourceTree = "<group>";
+		};
+		E77E53E72105D99900928B0D /* watchsimulator */ = {
+			isa = PBXGroup;
+			children = (
+				E77E53E82105D99900928B0D /* module.modulemap */,
+			);
+			path = watchsimulator;
+			sourceTree = "<group>";
+		};
+		E77E53E92105D99900928B0D /* macosx */ = {
+			isa = PBXGroup;
+			children = (
+				E77E53EA2105D99900928B0D /* module.modulemap */,
+			);
+			path = macosx;
+			sourceTree = "<group>";
+		};
+		E77E53EB2105D99900928B0D /* iphonesimulator */ = {
+			isa = PBXGroup;
+			children = (
+				E77E53EC2105D99900928B0D /* module.modulemap */,
+			);
+			path = iphonesimulator;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -112,7 +166,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				E77E53D021057EF800928B0D /* PBXTargetDependency */,
 			);
 			name = CryptoKit;
 			productName = CryptoKit;
@@ -132,9 +185,6 @@
 						CreatedOnToolsVersion = 9.4.1;
 						LastSwiftMigration = 0940;
 					};
-					E77E53CA21057ED900928B0D = {
-						CreatedOnToolsVersion = 9.4.1;
-					};
 				};
 			};
 			buildConfigurationList = E77E53B921057E9900928B0D /* Build configuration list for PBXProject "CryptoKit" */;
@@ -150,7 +200,6 @@
 			projectRoot = "";
 			targets = (
 				E77E53BE21057E9900928B0D /* CryptoKit */,
-				E77E53CA21057ED900928B0D /* CommonCryptoModuleMap */,
 			);
 		};
 /* End PBXProject section */
@@ -166,22 +215,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		E77E53CE21057EE500928B0D /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# This if-statement means we'll only run the main script if the CommonCryptoModuleMap directory doesn't exist\n# Because otherwise the rest of the script causes a full recompile for anything where CommonCrypto is a dependency\n# Do a \"Clean Build Folder\" to remove this directory and trigger the rest of the script to run\nif [ -d \"${SRCROOT}/Sources/CommonCryptoModuleMap\" ]; then\necho \"${SRCROOT}/Sources/CommonCryptoModuleMap directory already exists, so skipping the rest of the script.\"\nexit 0\nfi\n\nmkdir -p \"${SRCROOT}/Sources/CommonCryptoModuleMap\"\ncat <<EOF > \"${SRCROOT}/Sources/CommonCryptoModuleMap/module.modulemap\"\nmodule CommonCrypto [system] {\n    header \"${SDKROOT}/usr/include/CommonCrypto/CommonCrypto.h\"\n    export *\n}\nEOF";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		E77E53BA21057E9900928B0D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -192,14 +225,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		E77E53D021057EF800928B0D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E77E53CA21057ED900928B0D /* CommonCryptoModuleMap */;
-			targetProxy = E77E53CF21057EF800928B0D /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		E77E53C521057E9900928B0D /* Debug */ = {
@@ -259,6 +284,9 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/Sources/ModuleMaps/iphonesimulator";
+				"SWIFT_INCLUDE_PATHS[sdk=iphoneos*]" = "$(SRCROOT)/Sources/ModuleMaps/iphoneos";
+				"SWIFT_INCLUDE_PATHS[sdk=iphonesimulator*]" = "$(SRCROOT)/Sources/ModuleMaps/iphonesimulator";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -315,6 +343,9 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/Sources/ModuleMaps/iphonesimulator";
+				"SWIFT_INCLUDE_PATHS[sdk=iphoneos*]" = "$(SRCROOT)/Sources/ModuleMaps/iphoneos";
+				"SWIFT_INCLUDE_PATHS[sdk=iphonesimulator*]" = "$(SRCROOT)/Sources/ModuleMaps/iphonesimulator";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -373,22 +404,6 @@
 			};
 			name = Release;
 		};
-		E77E53CC21057ED900928B0D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		E77E53CD21057ED900928B0D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -406,15 +421,6 @@
 			buildConfigurations = (
 				E77E53C821057E9900928B0D /* Debug */,
 				E77E53C921057E9900928B0D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E77E53CB21057ED900928B0D /* Build configuration list for PBXAggregateTarget "CommonCryptoModuleMap" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E77E53CC21057ED900928B0D /* Debug */,
-				E77E53CD21057ED900928B0D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
