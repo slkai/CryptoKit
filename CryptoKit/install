@@ -1,4 +1,7 @@
 
+
+#!/bin/sh
+
 if [ -d "${SRCROOT}/Sources/CommonCryptoModuleMap" ]; then
 echo "${SRCROOT}/Sources/CommonCryptoModuleMap directory already exists, so skipping the rest of the script."
 exit 0
